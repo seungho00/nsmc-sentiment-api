@@ -14,7 +14,7 @@ Streamlit <br>
 ↓ HTTP <br>
 FastAPI <br>
 ↓ <br>
-전처리 → Tokenizer → BERT 모델 → 감성 결과
+전처리 → Tokenizer → BERT 모델 → 감성 결과 <br>
 ↓ HTTP <br>
 Streamlit <br>
 ↓ <br>
