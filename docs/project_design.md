@@ -30,8 +30,7 @@ nsmc-sentiment-api
 │   └── ui.py
 ├── docs
 │   ├── project_design.md           # 프로젝트 설계
-│   ├── development_log.md          # 개발 일지
-│   └── todo.md
+│   └── development_log.md          # 개발 일지
 ├── models                          # gitignore 설정
 │   └── best_bert.pt
 ├── .gitignore
