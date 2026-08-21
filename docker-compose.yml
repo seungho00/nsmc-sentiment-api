@@ -1,0 +1,18 @@
+services:
+  nsmc-sentiment-backend:
+    image: nsmc-sentiment-backend
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8000:8000"
+
+  nsmc-sentiment-frontend:
+    image: nsmc-sentiment-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - nsmc-sentiment-backend

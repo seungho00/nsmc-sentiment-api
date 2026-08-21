@@ -1,0 +1,10 @@
+# docs
+docs
+README.md
+
+# Environments
+.venv/
+__pycache__/
+*.pyc
+.git/
+.DS_Store
