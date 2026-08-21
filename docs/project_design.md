@@ -5,7 +5,6 @@
 2. 학습된 모델을 API로 제공
 3. Streamlit으로 웹 UI 구현
 4. Docker로 실행 환경 통일
-5. 모델 오류 분석
 
 ## 전체 구조
 사용자 <br>
@@ -23,19 +22,26 @@ Streamlit <br>
 ## 디렉토리 구조
 ```
 nsmc-sentiment-api
-├── app
+├── backend
+│   ├── __init__.py
 │   ├── main.py
 │   ├── config.py
 │   ├── predict.py                  # 전처리 및 추론
+│   └── models                      # gitignore 설정
+│       └── best_bert.pt
+├── frontend
 │   └── ui.py
 ├── docs
 │   ├── project_design.md           # 프로젝트 설계
 │   └── development_log.md          # 개발 일지
-├── models                          # gitignore 설정
-│   └── best_bert.pt
-├── .gitignore
+├── .dockerignore
+├── docker-compose.yml
+├── Dockerfile.backend
+├── Dockerfile.frontend
 ├── README.md
-└── requirements.txt
+├── .gitignore
+├── requirements-backend.txt
+└── requirements-frontend.txt
 ```
 
 ## 세부 모듈 구조
