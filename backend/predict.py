@@ -4,7 +4,7 @@ from transformers import (
     BertForSequenceClassification,
 )
 
-from app.config import (
+from backend.config import (
     TOKENIZER,
     MAX_LENGTH,
     MODELS_DIR,

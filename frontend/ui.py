@@ -8,7 +8,7 @@ sentence = st.text_area("영화 리뷰를 입력하세요.")
 
 if st.button("분석"):
     response = requests.post(
-        "http://127.0.0.1:8000/predict",
+        "http://nsmc-sentiment-backend:8000/predict",
         json={"sentence": sentence}
     )
 
