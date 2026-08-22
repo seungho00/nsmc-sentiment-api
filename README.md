@@ -67,9 +67,10 @@ Streamlit <br>
 
 ## 5. 실행 방법
 
-- `backend/models/best_bert.pt`는 Git 저장소에 포함하지 않았습니다.
-- 이 프로젝트를 실행하려면 먼저 `nsmc-sentiment-analysis` 프로젝트에서 BERT 모델을 학습해야 합니다.
-- 학습이 완료되면 생성된 `best_bert.pt`를 `backend/models/`에 배치합니다.
+- `backend/models/best_bert.pt`는 Git 저장소에 포함하지 않았다.
+- 이 프로젝트를 실행하려면 먼저 `nsmc-sentiment-analysis` 프로젝트에서 BERT 모델을 학습해야 한다.
+- `nsmc-sentiment-analysis/bert/train.ipynb`가 학습코드이다.
+- 학습이 완료되면 생성된 `best_bert.pt`를 `backend/models/`에 배치한다.
 
 ```
 cd nsmc-sentiment-api
