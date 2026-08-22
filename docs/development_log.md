@@ -25,3 +25,7 @@ docker run -p 8000:8000 <이미지 이름>
 - docker 컨테이너로 실행 시 127.0.0.1는 컨테이너를 가르킨다. 따라서 ui.py에서 기존에 `http://127.0.0.1:8000/predict`로 통신을 보내는 부분을 `http://nsmc-sentiment-backend:8000/predict`로 수정했다. compose로 실행하기 때문에 가능한 부분이다.
 - 컨테이너 내부의 파일 구조를 고려해야 한다. Dockerfile에서 `COPY backend/. .`을 사용했더니 **main.py**의 `from backend.predict` 부분에서 에러가 발생했다. 로컬 개발 환경과의 구조를 동일하게 하기 위해서 `COPY backend ./backend`로 수정했다.
 - `COPY backend .`과 `COPY backend/. .`의 역할은 같다.
+
+## 2026-08-22
+(README.md 작성, 최종 검수)
+- `requirements-backend.txt`에서 `app==0.0.1` 항목이 있었다. 이는 이전에 `backend` 폴더명을 `app`이었을 때, pipreqs가 내부 로컬 패키지를 pip로 설치한 패키지라고 잘못 파익해서 생긴 항목이었다. *Package 'app' is not installed in the selected environment.* 라고 VSCODE에서 경고 메시지를 보여줘서 발견할 수 있었다.
